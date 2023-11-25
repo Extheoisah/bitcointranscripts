@@ -3,7 +3,7 @@ title: "Lightning Payment Pathfinding for Reliability"
 transcript_by: Extheoisah via review.btctranscripts.com
 media: https://www.youtube.com/watch?v=p8toOF-imk4
 tags: ["pathfinding","lightning","routing"]
-speakers: ["Joost Jager"]
+speakers: ["Joost Jager","Adam Back"]
 categories: ["conference"]
 date: 2019-10-19
 ---
