@@ -8,7 +8,7 @@ categories: ["Conference"]
 date: 2020-12-02
 ---
 
-## Introduction
+## Introduction to Lightning
 
 Speaker 0: 00:00:00
 
