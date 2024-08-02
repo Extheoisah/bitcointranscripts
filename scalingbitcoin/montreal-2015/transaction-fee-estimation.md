@@ -1,13 +1,12 @@
 ---
-title: Transaction Fee Estimation
+title: "How Wallets Can Handle Real Transaction Fees"
 transcript_by: Bryan Bishop
 categories: ['conference']
-tags: ['wallet', 'fees']
+tags: ['fee-management']
 speakers: ['Bram Cohen']
+date: 2015-09-12
+media: https://www.youtube.com/watch?v=iKDC2DpzNbw&t=770s
 ---
-
-How wallets can handle real transaction fees
-
 You should have a market at this point, where some number of transactions never happen because they aren't willing to pay a fee. So you get some equilibrium of price going on. I proactively want to see this happen because we don't know what fees should be until we run the experiment and see what prices end up being. For this to happen, wallets have to do price setting in some way. For the most part they presently don't. I am going to talk about how they can be made to do that.
 
 First some groundrules, I am only talking about consumer wallets. There are other actors in the ecosystem that might want to handle fees in various ways. Also there's no microchannels, microchannels should be supported eventually but I'm dealing with the simpler case where a wallet is trying to make payments. Also I am assuming that replace-by-fee is in effect. This whole thing doesn't work without replace-by-fee. The way that you need to do payments is pretty broken unless you can replace-by-fee. You need aggressive replace-by-fee. Also you need an anti-dos mechanism, where you don't have an increase-by-epsilon every single time. They must increase it by a certain minimum amount to prevent denial-of-service on the whole network. The conclusion I come to here is that the replacement shouldn't be based on the amount that goes up, but rather that you have a policy that transactions can only be replaced once per block, it should only be after a transaction has been failed to go into a block that you should allow it to be replaced.
@@ -34,10 +33,6 @@ e^(lg(S) + (lg(M) - lg(S)) * H/B)
 That's basically my answer to what should be done, it's conservative, it's easily implemented and it can't be gamed in horrible ways. There's an interesting side question of what happens with your utxo combining. You have a wallet with utxos and you have to decide which ones to use for the inputs and which ouptuts, which effects the size of it. This matters surprisingly little because every new input that you get, every new piece of change you will eventually have to be combined, and you will have to pay the price for that, and it will happen at some point and it doesn't matter where that is. So your algorithm for coin selection isn't really effected all that much. You possibly could try and create transactions for doing your combinations at times for when transaction fees are low, and you could do those at your leisure. There are some possible extensions which could help in terms of making your transactions smaller, one is if you are using Schnorr signatures, you could use the combined schnorr signature on those, which would be a nice extension once you have schnorr signatures. You still need to reveal your public keys, which is space. A better one would be if you have two inputs where two need to be signed by the same value, you need to include the signature just once (whereas right now you need to include it twice), and if it's used properly, then it's pushed back the reveal of the same things going to the same output but only by one generation, it's not a big hit to privacy. Finally something you could do that might really provide optimization, every time that you have a private key that you never used in the history of the blockchain, you can give the private key, but I don't believe this saves much space, because you still need a new signature from it.
 
 That's the basics of how I think wallets should handle transaction fees.
-
-categories: ['conference']
-tags: ['wallet', 'fees']
----
 
 <http://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-November/011685.html>
 

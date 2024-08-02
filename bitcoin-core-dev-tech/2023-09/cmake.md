@@ -1,11 +1,10 @@
 ---
 title: CMake Update
 categories: ['core-dev-tech']
-tags: ['bitcoin core', 'build systems']
+tags: ['bitcoin-core', 'build-system']
 date: 2023-09-21
 speakers: ['Cory Fields']
 ---
-
 ## Update
 
 Hebasto has a branch he has been PRing into his own repo. Opened a huge CMake PR for Bitcoin core.
@@ -45,5 +44,5 @@ The goal is after the branch off to merge CMake and delete autotools.
 
 ## The plan
 
-Ping individual people to test - there is a [PR to test]((https://github.com/hebasto/bitcoin/pull/31)). Goal is to have conviction on whether to merge after branch off.
+Ping individual people to test - there is a [PR to test](https://github.com/hebasto/bitcoin/pull/31). Goal is to have conviction on whether to merge after branch off.
 Once things gets merged and that you can’t build, it’s on you.
