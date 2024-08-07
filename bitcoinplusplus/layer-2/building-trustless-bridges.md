@@ -4,13 +4,13 @@ transcript_by: 'Extheoisah via review.btctranscripts.com'
 media: 'https://www.youtube.com/watch?v=M40yzuv6DNY'
 tags: []
 speakers:
-  - 'Speaker single_speaker'
+  - 'John Light'
 categories:
   - 'conference'
 date: '2023-07-06'
 source_file: 'https://rr2---sn-a0jpm-a0md.googlevideo.com/videoplayback?expire=1723093664&ei=QP6zZr64GMafvdIPuZ_LiQE&ip=2001%3A910%3A800%3A0%3A7b3a%3A3fde%3A1cee%3A3a2f&id=o-ABWjkU1JLU8tpuYEaE3YMBn2wswjYPK45dRrSp4ncpve&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=7o&mm=31%2C29&mn=sn-a0jpm-a0md%2Csn-25ge7nzk&ms=au%2Crdu&mv=m&mvi=2&pl=36&initcwndbps=711250&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=2499.628&lmt=1697060945929158&mt=1723071643&fvip=5&c=ANDROID_TESTSUITE&txp=6218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgKJ1F7-I4r7r8vteOS8hNMnQjtZ2FvjWPYvb-nKxISx4CIQCy14nfs88W_ErfKTZ9mm_d51NDZSZcyw3AYhuLCpspBA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgAoCR-JwCYaPQHZRmR_SXvieOWEyq3DO2OpOUIbgLjdgCIEKqyIUCSdL9oSDYGMrct8OgTvAKubCLYzrIrNqhEnOe&host=rr2---sn-a0jpm-a0md.googlevideo.com'
 ---
-Speaker single_speaker: 00:00:03
+John Light: 00:00:03
 
 Thank you all for coming to my talk.
 As is titled, I'll be talking about how we can build trustless bridges for Bitcoin.
@@ -51,7 +51,7 @@ The other motivating factor is we want to be able to add new functionality to Bi
 
 ## Why create a bitcoin bridge?
 
-Speaker single_speaker: 00:04:51
+John Light: 00:04:51
 
 So everyone knows, or at least people who are familiar with Bitscreen's script know that it's kind of limited in its capabilities.
 There are only a few primitives that you can combine together to create Bitcoin smart contracts.
@@ -128,7 +128,7 @@ So centralized custodians aren't all bad.
 
 ## Centralized custodian
 
-Speaker single_speaker: 00:14:55
+John Light: 00:14:55
 
 They have some benefits.
 They're cheap.
@@ -148,7 +148,7 @@ Some quorum of the custodians have to sign off on a transaction in order to effe
 
 ## Federated multisig
 
-Speaker single_speaker: 00:16:26
+John Light: 00:16:26
 
 Similar to the centralized custodians, they're cheap, they have really high throughput, you can just spin these up as many as you need.
 You can have custom execution environments.
@@ -193,7 +193,7 @@ So, the benefits here are, again, they're cheap, they're high throughput.
 
 ## Hashrate escrow
 
-Speaker single_speaker: 00:21:39
+John Light: 00:21:39
 
 Even though an individual sidechain might have relatively low throughput, you can just spin up like an arbitrary large number of sidechains.
 They can have custom execution environments.
@@ -234,7 +234,7 @@ You can have a custom execution environment.
 
 ## Collateralized custodian
 
-Speaker single_speaker: 00:26:13
+John Light: 00:26:13
 
 There's endogenous, meaning internal, like honesty incentives because they have this collateral that will get seized or slashed if they get if they were dishonest.
 And then you know optionally you could have no single point of failure most of the systems that are designed like this way use multi-sigs of some sort.
@@ -254,7 +254,7 @@ So state chains are cool because they have high throughput.
 
 ## Statechain
 
-Speaker single_speaker: 00:28:08
+John Light: 00:28:08
 
 It's the first system we've talked about that has a unilateral redemption mechanism.
 You could optionally have improved privacy with blind signatures.
@@ -277,7 +277,7 @@ It's also got high throughput.
 
 ## Lightning Network
 
-Speaker single_speaker: 00:31:41
+John Light: 00:31:41
 
 There's no single point of failure because both users can like lead with their funds if the other one's uncooperative.
 There's a unilateral redemption capability.
@@ -295,7 +295,7 @@ I'm gonna skip the optimistic rollup, which is more like a theoretical bridge th
 
 ## L2 optimistic rollup
 
-Speaker single_speaker: 00:34:05
+John Light: 00:34:05
 
 And go straight to the last bridge that I wanted to cover which is the L2 validity rollup.
 So this is another bridge that like you can't build on Bitcoin today but it is a bridge design that has been proposed and actually implemented on other blockchains.
@@ -306,7 +306,7 @@ So L2 validity roll-ups are nice because they give you a custom execution enviro
 
 ## L2 validity rollup
 
-Speaker single_speaker: 00:35:09
+John Light: 00:35:09
 
 It could support L2 validity roll-up would be a destination system that can support any kind of execution environment.
 It could be a Simplicity smart contract or Ethereum, you know, EVM smart contracts or Zcash-style private transactions.
@@ -331,7 +331,7 @@ Thank you.
 
 ## Ingredients for a trustless bridge
 
-Speaker single_speaker: 00:38:24
+John Light: 00:38:24
 
 So the ingredients that you need to have a trustless bridge like this and the validity you roll up has all of these ingredients is that layer one needs to know what the rules of the destination system are, or at least needs to know a hash of the rules.
 Because with that, we can verify that destination system state updates are valid according to the rules of the system.
